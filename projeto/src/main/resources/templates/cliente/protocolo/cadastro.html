@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{administrativo/fragments/layout}">
+<head>
+<title>Cadastro de Protocolo MBOV</title>
+</head>
+<body>
+	<section class="layout-content" layout:fragment="corpo">
+		
+	        <div class="page-header">
+	            <nav class="navbar navbar-expand-md navbar-top bg-light">
+	                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+	                    <ul class="navbar-nav">
+	                        <li class="nav-item active">
+	                            <i class="oi oi-caret-right"></i>
+	                            <span>Cadastrar Protocolo</span>
+	                        </li>
+	                    </ul>
+	                </div>
+	                <a class="btn btn-primary btn-md"
+					href="/administrativo/funcionarios/listar" role="button"> <span
+					class="oi oi-spreadsheet" title="Cadastro" aria-hidden="true"></span>
+					<span>Listar Protocolos</span>
+				</a>
+	            </nav>
+	        </div>
+	
+	        <div class="container" id="cadastro">
+	            <form action="/cliente/protocolo/salvar"  th:object="${itensProtocolo}" method="POST">
+	                <div class="form-row">
+	                    <div class="form-group col-md-6">
+	                        <label for="nome">Nome do Protocolo</label>
+	                        <input type="text" class="form-control" id="nome" placeholder="Nome do Protocolo"
+	                               autofocus="autofocus" name="nome" value=""    th:field="${protocolo.nome}"/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                    <div class="form-group col-md-6">
+	                       <label for="dataManejo">Data Manejo</label>
+	                        <input type="date" class="form-control" id="dataManejo" name="dataManejo" value="" />
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="form-row">
+	                    <div class="form-group col-md-6">
+	                       <label for="nomeDia">Nome DIA</label>
+	                        <select id="nomeDia" class="form-control" name="nomeDia" >
+	                            <option value="">Selecione...</option>
+	                            <option value="1">D0</option>
+	                            <option value="2">D1</option>
+	                            <option value="3">D2</option>
+	                            <option value="4">D3</option>
+	                            <option value="5">D4</option>	
+	                            <option value="6">D5</option>	
+	                            <option value="7">D6</option>	
+	                            <option value="8">D7</option>	
+	                            <option value="9">D8</option>	
+	                            <option value="10">D9</option>
+	                            <option value="11">D10</option>	
+	                            <option value="12">D11</option>	
+	                            <option value="13">D12</option>	
+	                            <option value="14">D13</option>	
+	                            <option value="15">D14</option>	
+	                            <option value="16">D15</option>	
+	                            <option value="17">D16</option>
+	                            <option value="18">D17</option>	
+	                            <option value="19">D18</option>
+	                            <option value="20">D19</option>
+	                            <option value="21">D20</option>					                          
+	                        </select>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                        
+	                    </div>
+	                    <div class="form-group col-md-6">
+	                        
+							<label >Insumo</label> 							
+							<select th:field="*{insumo}"
+									class="form-control">
+									<option th:each="in: ${listaInsumos}"
+										th:value="${in.id}" th:text="${in.descricao}"></option>
+								</select>
+							
+							<div class="invalid-feedback"></div>
+						</div>
+						
+						<a class="btn  btn-success " 
+					href="/cliente/protocolo/adicionar"  th:object="${itensProtocolo}" role="button"> <span
+					class="oi oi-task" title="Cadastro" aria-hidden="true"></span> Adicionar			
+					</a>
+						
+						<div class="table-responsive">
+				<table class="table table-striped table-hover table-sm">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>DIA</th>
+							<th>Data/horario</th>
+							<th>Nome Farmaco</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+						    <tr th:each="item : ${listaItens2}">
+							<td th:text="${item.nomeDia}"></td>
+							<td th:text="${item.dataManejo}"></td>
+							<td th:text="${item.insumo.descricao}"></td>
+							<td class="text-center"><a class="btn btn-sm btn-danger"
+									th:href="@{/removerItemProtocolo/{id}(id=${item.id})}"
+									role="button"><i class="fa fa-trash"></i></a> </td>
+							
+
+
+							
+						</tr>
+					</tbody>
+				</table>
+			</div>
+					
+						
+						
+	                        
+	                        
+	                        
+	                 
+	                </div>
+
+	                
+	                
+	                
+	                    
+	                </div>
+	                <input type="hidden" id="id" name="id" value=""/>
+	                <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
+	            </form>
+	            
+							
+	        </div>
+	    </section>
+	
+
+
+
+</body>
+</html>

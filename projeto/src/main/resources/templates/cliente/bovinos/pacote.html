@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{cliente/fragments/layout}">
+
+<head>
+
+<title>Pacote - Formar Lote</title>
+
+</head>
+
+<body>
+
+	<!-- Page Content -->
+	<div class="container" layout:fragment="corpo">
+
+
+		<div class="row">
+		 <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            
+                            <th scope="col">Código</th>
+                            <th scope="col">Bovino</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Brinco</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="item : ${listaItens}">
+							<td th:text="${item.bovino.id}"></td>
+							<td th:text="${item.bovino.nome}"></td>
+							<td th:text="${item.quantidade}"></td>
+							<td th:text="${item.bovino.numeroBrinco}"></td>
+							
+                           
+                            <td class="text-center"><a class="btn btn-sm btn-danger"
+									th:href="@{/removerBovino/{id}(id=${item.bovino.id})}"
+									role="button"><i class="fa fa-trash"></i></a> </td>
+                        </tr>
+                        
+                      
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Total de Animais</strong></td>
+                            <td class="text-right"><strong>1</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+             </div>
+        <div class="col mb-2">
+            <div class="row">
+                <div class="col-sm-12  col-md-6">
+                    <button class="btn  btn-dark">Continuar Seleção</button>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                    
+                    
+                    <a class="btn  btn-success " 
+					href="/finalizar/confirmar" role="button"> <span
+					class="oi oi-task" title="Cadastro" aria-hidden="true"></span> Salvar			
+					
+					
+					
+				</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+		
+
+
+		</div>
+		<!-- /.row -->
+		
+
+	</div>
+	<!-- /.container -->
+
+
+
+
+</body>
+
+</html>

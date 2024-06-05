@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Sistema Mbov</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<link rel="icon" href="/image/favicon.png" />
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!-- Bootstrap core CSS -->
+<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/webjars/open-iconic/font/css/open-iconic-bootstrap.min.css"
+	rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link href="/css/style.css" rel="stylesheet" />
+</head>
+<body>
+	<header>
+		<nav
+			class="navbar navbar-inverse navbar navbar-dark bg-dark navbar-expand-lg">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="btn btn-dark navbar-toggle pull-left">
+						<i class="oi oi-menu"></i>
+					</button>
+					
+					
+					<a class="navbar-brand " href="#">Manejo IATF do Sistema MBOV</a>
+					  
+      <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+   
+     
+      
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Principal
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cliente/cadastrar">Sair</a>
+          </li>
+           
+         
+        </ul>
+      </div>
+   
+  </nav>
+   
+      
+     
+      
+           
+				</div>
+				
+			</div>
+			
+			
+			
+		</nav>
+		 
+    
+     
+      
+     
+      
+   
+ 
+	</header>
+
+	<div class="layout-main" >
+
+		<aside>
+			<nav class="sidebar sidebar-open" style="height: 1300px">
+				<ul class="nav nav-pills">
+					<li class="nav-item"><a class="nav-link " href="/home.html"> <i
+							class="oi oi-home"></i> <span>Home</span>
+					</a></li>
+				</ul>
+				<ul class="nav nav-pills">
+					<li class="nav-item"><span class="nav-link active">Cadastros</span></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/cliente/bovinos/cadastrar"> <i
+							class="oi oi-plus"></i> <span>Cadastrar Bovino </span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/cliente/bovinos/listar"> <i
+							class="oi oi-spreadsheet"></i> <span>Listar Bovino </span>
+					</a></li>
+					
+					
+				</ul>
+				
+				<ul class="nav nav-pills">
+					<li class="nav-item"><span class="nav-link active">Controle Inseminações</span></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/cliente/bovinos/formarLote2"> <i
+							class="oi oi-plus"></i> <span>Formar Lotes </span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/administrativo/papeis/listar"> <i
+							class="oi oi-eyedropper"></i> <span>Implantar </span>
+					</a></li>
+					
+					<li class="nav-item"><a class="nav-link"
+						href="/administrativo/papeis/listar"> <i
+							class="oi oi-share-boxed"></i> <span>Retirar </span>
+					</a></li>
+					
+					<li class="nav-item"><a class="nav-link"
+						href="/administrativo/papeis/listar"> <i
+							class="oi oi-fullscreen-exit "></i> <span>Inseminar </span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/administrativo/papeis/listar"> <i
+							class="oi oi-task"></i> <span>Lançar Diag.Gest</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/administrativo/papeis/listar"> <i
+							class="oi oi-task "></i> <span>Lançar Nascimentos </span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/cliente/protocolo/cadastrar"> <i
+							class="oi oi-beaker"></i> <span>Criar Protocolo de IATF </span>
+					</a></li>
+					
+					
+				</ul>
+				
+				<ul class="nav nav-pills">
+					<li class="nav-item"><span class="nav-link active">Relatórios</span></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/administrativo/permissoes/cadastrar"> <i
+							class="oi oi-list"></i> <span>Inseminações </span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/administrativo/permissoes/listar"> <i
+							class="oi oi-list"></i> <span>Indices de Prenhez </span>
+					</a></li>
+					
+					<li class="nav-item"><a class="nav-link"
+						href="/administrativo/papeis/listar"> <i
+							class="oi oi-list"></i> <span>Nascimentos </span>
+					</a></li>
+					
+				
+					
+				</ul>
+				
+				
+				
+				
+			
+				
+				
+			</nav>
+		</aside>
+
+		<section class="layout-content" layout:fragment="corpo">
+				Principal			
+		</section>
+
+	</div>
+	<footer class="layout-footer">
+		<div class="container">
+			<span class="footer-copy">&copy; 2024 Lima&Dutra. Todos os
+				direitos reservados.</span>
+		</div>
+	</footer>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="/webjars/jquery/jquery.min.js"></script>
+	<script src="/webjars/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	    
+		$(function() {
+			$('[data-toggle="popover"]').popover();
+		});
+		
+		$(document).ready(function(){
+		    $(".navbar-toggle").click(function(){
+		        $(".sidebar").toggleClass("sidebar-open");
+		    })
+		});
+
+	</script>
+</body>
+</html>

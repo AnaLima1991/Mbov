@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{administrativo/fragments/layout}">
+<head>
+    <title>Página principal do sistema MBov</title>
+</head>
+<body>
+		<section class="layout-content" layout:fragment="corpo">
+
+			<nav class="navbar navbar-expand-md bg-light">
+				<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active"><i class="oi oi-caret-right"></i>
+							<span>Home</span></li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="container">
+				<div id="list-home" class="row">
+					<div class="col-4">
+						<div class="list-group" id="list-tab" role="tablist">
+							<a class="list-group-item list-group-item-action active"
+								id="list-spring-boot-list" data-toggle="list"
+								href="#spring-boot" role="tab" aria-controls="spring-boot">IATF em blocos</a>
+							<a class="list-group-item list-group-item-action"
+								id="list-sts-list" data-toggle="list" href="#sts" role="tab"
+								aria-controls="sts">Reprodução</a> <a
+								class="list-group-item list-group-item-action"
+								id="list-thymeleaf-list" data-toggle="list" href="#thymeleaf"
+								role="tab" aria-controls="thymeleaf">Método Reprodutivo</a> <a
+								class="list-group-item list-group-item-action"
+								id="list-webjars-list" data-toggle="list" href="#webjars"
+								role="tab" aria-controls="webjars">Inseminação Artificial</a> <a
+								class="list-group-item list-group-item-action"
+								id="list-hibernate-list" data-toggle="list" href="#hibernate"
+								role="tab" aria-controls="hibernate">Pecuária</a> <a
+								class="list-group-item list-group-item-action"
+								id="list-bootstrap-list" data-toggle="list" href="#bootstrap"
+								role="tab" aria-controls="bootstrap">Tecnologia</a>
+						</div>
+					</div>
+					<div class="col-8">
+						<div class="tab-content" id="nav-tabContent">
+							<div class="tab-pane fade show active" id="spring-boot"
+								role="tabpanel" aria-labelledby="list-spring-boot-list">
+								<a href="https://www.embrapa.br/busca-de-solucoes-tecnologicas/-/produto-servico/3014/iatf-em-blocos">IATF em blocos
+									</a> foi desenvolvida para aproveitar o máximo potencial
+									 reprodutivo de fêmeas bovinas submetidas a um protocolo de IATF, resultando 
+									 em aumentos de 10% a 20% de prenhez em relação às vacas submetidas à metodologia 
+									 de IATF convencional. O diferencial da IATF em Blocos é a realização da 
+									 inseminação artificial de acordo com o diâmetro do folículo dominante, ou seja, 
+									 a resposta do ovário da vaca.
+							</div>
+							<div class="tab-pane fade" id="sts" role="tabpanel"
+								aria-labelledby="list-sts-list">
+								A eficiência <a href="https://www.embrapa.br/qualidade-da-carne/carne-bovina/producao-de-carne-bovina/reproducao#:~:text=A%20efici%C3%AAncia%20reprodutiva%20%C3%A9%20fundamental,e%20mais%20nascimentos%20de%20bezerros.">reprodutiva</a> 
+								é fundamental para o sistema de produção de bovinos,
+								 que apresenta ciclo reprodutivo longo, com um descendente a cada parto.
+								  Uma boa eficiência reprodutiva, seja pelo acasalamento ou pela inseminação artificial,
+								   permite maior vida útil dos animais e mais nascimentos de bezerros. 
+								   A idade para se atingir o peso ideal vai depender do nível de manejo, 
+								   da alimentação e de cuidados sanitários.
+							</div>
+							<div class="tab-pane fade" id="thymeleaf" role="tabpanel"
+								aria-labelledby="list-thymeleaf-list">
+								Para alcançar boas taxas de prenhez,
+								 todos os anos, entre agosto e setembro é necessário começar o planejamento e a preparação 
+								 da estação de monta subsequente. Um dos principais aspectos a serem levados em conta é a 
+								 escolha entre<a href="https://www.embrapa.br/busca-de-noticias/-/noticia/54913400/artigo-monta-natural-ou-inseminacao-artificial-em-tempo-fixo-o-que-vai-ser-na-proxima-estacao-de-monta"> monta natural ou inseminação artificial</a>. Esta decisão nem sempre é fácil,
+								  são inúmeros os aspectos que precisam ser levados em consideração. Caso a opção seja
+								   a monta natural, é preciso preparar e/ ou adquirir os touros, realizar exame andrológico
+								    deles etc. No caso de se optar pela Inseminação Artificial em Tempo Fixo - IATF,
+								     é necessária a escolha e aquisição do sêmen, protocolos hormonais, consultoria técnica, 
+								     entre outros
+							</div>
+							<div class="tab-pane fade" id="webjars" role="tabpanel"
+								aria-labelledby="list-webjars-list">
+								<a href="https://www.embrapa.br/agencia-de-informacao-tecnologica/criacoes/gado_de_leite/producao/sistemas-de-producao/reproducao/processos/inseminacao-artificial">Inseminação Artificial</a> É um processo de reprodução 
+								em que o sêmen é colocado no útero da vaca em cio pelo homem, usando equipamentos especiais,
+								 visando à sua fecundação.As vacas, para serem inseminadas, devem estar bem nutridas, saudáveis 
+								 e sem problemas de reprodução. O sucesso da inseminação artificial depende também do máximo cuidado 
+								 de higiene.
+							</div>
+							<div class="tab-pane fade" id="hibernate" role="tabpanel"
+								aria-labelledby="list-hibernate-list">
+								A adoção de tecnologias na <a href="https://www.embrapa.br/grandes-contribuicoes-para-a-agricultura-brasileira/pecuaria">pecuária</a> brasileira proporcionou 
+								a modernização do setor com incremento da produção e da produtividade, em bases sustentáveis. Nos últimos 40 anos,
+								 a produção de carne de aves aumentou 22 vezes;  Pesquisas em genética, avanços no controle de pragas e doenças e
+								  melhoria das pastagens aumentaram de 11% para 22% a média de desfrute dos rebanhos bovinos de corte
+							</div>
+							<div class="tab-pane fade" id="bootstrap" role="tabpanel"
+								aria-labelledby="list-bootstrap-list">
+								A digitalização no campo é uma tendência. As ferramentas <a href="https://www.embrapa.br/busca-de-noticias/-/noticia/80271706/tecnologias-digitais-contribuem-para-melhorar-eficiencia-da-producao-de-alimentos-de-forma-mais-sustentavel">tecnológicas</a>  
+								 e de pecuária de precisão são importantes para manter a competitividade 
+								do Brasil no mercado global. Os avanços estão relacionados à automação de máquinas, sensores, inteligência artificial, 
+								aprendizado de máquinas, aplicativos, entre outros, tornando a produção mais eficiente.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+</body>
+</html>
